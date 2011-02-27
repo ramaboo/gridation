@@ -1,0 +1,61 @@
+@mixin fill($top: false, $right: false, $bottom: false, $left: false)
+  @include gridation-fill
+  @if $top
+    margin-top: ($top * $gridation-row-height) + ($top * $gridation-row-gutter) + $gridation-grid-margin-top
+  
+  @if $right
+    margin-right: ($right * $gridation-column-width) + ($right * $gridation-column-gutter) + $gridation-grid-margin-right
+  
+  @if $bottom
+    margin-bottom: ($bottom * $gridation-row-height) + ($bottom * $gridation-row-gutter) + $gridation-grid-margin-bottom
+  
+  @if $left
+    margin-left: ($left * $gridation-column-width) + ($left * $gridation-column-gutter) + $gridation-grid-margin-left
+
+@mixin fill-top($n: 1)
+  @include fill($n)
+
+@mixin fill-right($n: 1)
+  @include fill(false, $n)
+
+@mixin fill-bottom($n: 1)
+  @include fill(false, false, $n)
+
+@mixin fill-left($n: 1)
+  @include fill(false, false, false, $n)
+
+@mixin gridation-fill-base
+
+
+@mixin gridation-fill
+  @include gridation-fill-base
+
+
+@mixin gridation-fill-classes
+  .fill
+    @include fill
+  .fill-top
+    @include fill-top
+  @for $i from 0 through $gridation-grid-rows
+    .fill-top-#{$i}
+      @include fill-top($i)
+  
+  .fill-right
+    @include fill-right
+  @for $i from 0 through $gridation-grid-columns
+    .fill-right-#{$i}
+      @include fill-right($i)
+  
+  .fill-bottom
+    @include fill-bottom
+  @for $i from 0 through $gridation-grid-rows
+    .fill-bottom-#{$i}
+      @include fill-bottom($i)
+  
+  .fill-left
+    @include fill-left
+  @for $i from 0 through $gridation-grid-columns
+    .fill-left-#{$i}
+      @include fill-left($i)
+
+

@@ -1,0 +1,51 @@
+@mixin container($columns: false, $rows: false)
+  @include gridation-container
+  @if $columns == 0 or $rows == 0
+    display: none !important
+  
+  @if $columns
+    @include gridation-container-width($columns)
+  
+  @if $rows
+    @include gridation-container-height($rows)
+
+@mixin column-container($n)
+  @include container($n, false)
+
+@mixin row-container($n)
+  @include container(false, $n)
+
+@mixin global-container($columns: false, $rows: false)
+  margin: 0 auto
+  @include clearfix
+  @include container($columns, $rows)
+  
+
+@mixin gridation-container-base
+  @include gridation-grid-base
+
+@mixin gridation-container-width($n)
+  width: ($gridation-column-width + $gridation-column-gutter) * $n
+
+@mixin gridation-container-height($n)
+  height: ($gridation-column-width + $gridation-column-gutter) * $n
+
+@mixin gridation-container
+  @include gridation-container-base
+  margin: 0
+
+@mixin gridation-container-classes
+  .container
+    @include container
+  @for $i from 0 through $gridation-grid-rows
+    @for $j from 0 through $gridation-grid-columns
+      .container-#{$j}-#{$i}
+        @include container($j, $i)
+
+  @for $i from 0 through $gridation-grid-columns
+    .column-container-#{$i}
+      @include column-container($i)
+      
+  @for $i from 0 through $gridation-grid-rows
+    .row-container-#{$i}
+      @include row-container($i)

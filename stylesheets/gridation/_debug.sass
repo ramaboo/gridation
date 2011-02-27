@@ -1,0 +1,69 @@
+@mixin debug($n: false, $saturation: 100, $lightness: 50)
+  @include gridation-debug-background-color($n, $saturation, $lightness)
+
+@mixin debug-container($n: false)
+  @include gridation-debug-background-color($n, 100, 75)
+
+@mixin debug-symmetric($n: false)
+  @include gridation-debug-background-color($n, 100, 25)
+
+@mixin debug-stack($n: false)
+  @include gridation-debug-stack-background-color($n)
+  
+@mixin debug-color($color: red)
+  background-color: $color
+
+@mixin gridation-debug-background-color($n: false, $saturation: 100, $lightness: 50)
+  @if $n == 0
+    background-color: #ffffff
+  @else if $n
+    background-color: hsl((360 / $gridation-debug-colors * ($n - 1)), $saturation, $lightness)
+  @else
+    background-color: hsl(0, $saturation, $lightness)
+
+@mixin gridation-debug-stack-background-color($n)
+  @if $n == 0
+    background-color: #ffffff
+  @else if $n
+    background-color: hsl(0, 0, ((100 / $gridation-stack-levels) * ($n - 1)))
+  @else
+    background-color: hsl(0, 0, 0)
+
+@mixin gridation-debug-classes
+  .debug
+    @include debug
+  @for $i from 0 through $gridation-debug-colors
+    .debug-#{$i}
+      @include debug($i)
+  
+  .debug-container
+    @include debug-container
+  @for $i from 0 through $gridation-debug-colors
+    .debug-container-#{$i}
+      @include debug-container($i)
+  
+  .debug-symmetric
+    @include debug-symmetric
+  @for $i from 0 through $gridation-debug-colors
+    .debug-symmetric-#{$i}
+      @include debug-symmetric($i)
+  
+  .debug-stack
+    @include debug-stack
+  @for $i from 0 through $gridation-stack-levels
+    .debug-stack-#{$i}
+      @include debug-stack($i)
+
+  .debug-black
+    @include debug-color(black)
+  .debug-gray
+    @include debug-color(gray)
+  .debug-white
+    @include debug-color(white)
+  .debug-red
+    @include debug-color(red)
+  .debug-green
+    @include debug-color(green)
+  .debug-blue
+    @include debug-color(blue)
+  

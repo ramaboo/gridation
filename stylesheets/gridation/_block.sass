@@ -1,0 +1,29 @@
+@mixin block($columns: false, $rows: false)
+  @include gridation-block
+  @if $columns == 0 or $rows == 0
+    display: none !important
+  
+  @if $columns
+    @include gridation-column-width($columns)
+  
+  @if $rows
+    @include gridation-row-height($rows)
+
+@mixin gridation-block-base
+  @include gridation-grid-base
+
+@mixin gridation-block-margins
+  @include gridation-column-margins
+  @include gridation-row-margins
+
+@mixin gridation-block
+  @include gridation-block-base
+  @include gridation-block-margins
+
+@mixin gridation-block-classes
+  .block
+    @include block
+  @for $i from 0 through $gridation-grid-rows
+    @for $j from 0 through $gridation-grid-columns
+      .block-#{$j}-#{$i}
+        @include block($j, $i)

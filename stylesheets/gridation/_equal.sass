@@ -1,0 +1,54 @@
+@mixin equal($number, $padding-left: false, $padding-right: false, $border-left: false, $border-right: false, $debug: false)
+  @extend .equal
+  @if $number == 0
+    display: none
+  @else
+    $width: (($gridation-columns / $number) * $gridation-column-width) + (($gridation-columns / $number - 1) * $gridation-column-gutter)
+    
+    @if $padding-left
+      padding-left: $padding-left
+      $width: $width - $padding-left
+    
+    @if $padding-right
+      padding-right: $padding-right
+      $width: $width - $padding-right
+    
+    @if $border-left
+      border-left-width: $border-left
+      border-style: solid
+      $width: $width - $border-left
+    
+    @if $border-right
+      border-right-width: $border-right
+      border-style: solid
+      $width: $width - $border-right
+    
+    @if subpixel($width) and $gridation-debug
+      @debug "Subpixel rendering may occur on .equal-#{$number}"
+    
+    width: $width
+  @if $gridation-debug or $debug
+    @include gridation-equal-debug-background-color($number)
+
+@mixin equal-border($number, $border-left: false, $border-right: false)
+  @include equal($number, false, false, $border-left, $border-right)
+  
+@mixin equal-padding($number, $padding-left: false, $padding-right: false)
+  @include equal($number, $padding-left, $padding-right)
+
+@mixin equal-debug($number, $padding-left: false, $padding-right: false, $border-left: false, $border-right: false)
+  @include equal($number, $padding-left, $padding-right, $border-left, $border-right, true)
+
+@mixin gridation-equal
+  .equal
+    @extend .grid
+
+@mixin gridation-equal-classes
+  @for $i from 0 through $gridation-grid-columns
+    .equal-#{$i}
+      @include equal($i)
+      &.debug
+        @include gridation-equal-debug-background-color($i)
+
+
+

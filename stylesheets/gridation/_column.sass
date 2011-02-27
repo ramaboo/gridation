@@ -1,0 +1,29 @@
+@mixin column($n: false)
+  @include gridation-column
+  @if $n == 0
+    display: none !important
+  @else if $n
+    @include gridation-column-width($n)
+
+@mixin gridation-column-base
+  @include gridation-grid-base
+
+@mixin gridation-column-width($n)
+  width: ($gridation-column-width * $n) + (($n - 1) * $gridation-column-gutter)
+
+@mixin gridation-column-margins
+  margin-right: $gridation-grid-margin-right
+  margin-left: $gridation-grid-margin-left
+
+@mixin gridation-column
+  @include gridation-column-base
+  @include gridation-column-margins
+
+@mixin gridation-column-classes
+  .column
+    @include column
+  @for $i from 0 through $gridation-grid-columns
+    .column-#{$i}
+      @include column($i)
+
+

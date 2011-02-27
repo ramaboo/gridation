@@ -1,0 +1,27 @@
+@mixin row($n: false)
+  @include gridation-row
+  @if $n == 0
+    display: none !important
+  @else if $n
+    @include gridation-row-height($n)
+
+@mixin gridation-row-base
+  @include gridation-grid-base
+
+@mixin gridation-row-height($n)
+  height: ($gridation-row-height * $n) + (($n - 1) * $gridation-row-gutter)
+
+@mixin gridation-row-margins
+  margin-top: $gridation-grid-margin-top
+  margin-bottom: $gridation-grid-margin-bottom
+
+@mixin gridation-row
+  @include gridation-row-base
+  @include gridation-row-margins
+
+@mixin gridation-row-classes
+  .row
+    @include row
+  @for $i from 0 through $gridation-grid-rows
+    .row-#{$i}
+      @include row($i)

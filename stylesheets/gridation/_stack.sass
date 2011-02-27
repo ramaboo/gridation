@@ -1,0 +1,20 @@
+@mixin stack($n: false, $position: $gridation-stack-position-approach)
+  @include gridation-stack($position)
+  @if $n
+    z-index: $n * $gridation-stack-multiplier
+  @else
+    z-index: 0
+
+@mixin stack-reset($position: auto)
+  @include stack(0, $position)
+
+@mixin gridation-stack($position: $gridation-stack-postion)
+  @if $position
+    postion: $position
+
+@mixin gridation-stack-classes
+  .stack
+    @include stack
+  @for $i from 0 through $gridation-stack-levels
+    .stack-#{$i}
+      @include stack($i)

@@ -1,0 +1,27 @@
+@mixin grid($background: false)
+  @include gridation-grid($background)
+  width: $gridation-grid-width
+  height: $gridation-grid-height
+
+@mixin column-grid($background: false)
+  @include gridation-grid($background)
+  width: $gridation-grid-width
+
+@mixin row-grid($background: false)
+  @include gridation-grid($background)
+  height: $gridation-grid-height
+
+
+@mixin gridation-grid($background: false)
+  @include gridation-grid-base
+  @if $background
+    @include background-grid
+
+@mixin gridation-grid-base
+  position: relative
+  @include float-left
+  
+
+@mixin gridation-grid-classes
+  .grid
+    @include grid
