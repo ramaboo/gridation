@@ -8,7 +8,7 @@
 For automatic installation edit your [Gemfile][gemfile]:
     gem 'gridation'
 
-Now run Bundler:
+Now run [Bundler](http://gembundler.com/):
     $ bundle install
 
 Add this to a file included in your load path (e.g. `config/enviroment.rb` or `config/initializers/compass.rb`):
@@ -52,3 +52,4 @@ Copyright 2009 - 2011 [David Singer][david].
 [david]: http://ramaboo.com/david
 [license]: https://github.com/ramaboo/gridation/blob/master/LICENSE
 [gemfile]: http://gembundler.com/gemfile.html
+[bundler]: http://gembundler.com/
