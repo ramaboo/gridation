@@ -4,13 +4,11 @@ Gridation is a full featured Sass based grid framework built on top of Compass.
 
 ## Installation
 
-From the command line:
-    gem install gridation
-    
-Edit your Gemfile:
+### Rails 3
+For automatic installation edit your Gemfile:
     gem 'gridation'
 
-Run bundler:
+And run bundler:
     $ bundle install
 
 Add this to a file included in your load path (e.g. `config/enviroment.rb` or `config/initializers/compass.rb`):
