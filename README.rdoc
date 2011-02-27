@@ -16,7 +16,7 @@ http://gridation.com
 
 
 == License
-  Gridation is released under the {MIT License}[link:LICENSE].
+Gridation is released under the {MIT License}[link:LICENSE].
 
 Copyright 2009 - 2011 David Singer <david@ramaboo.com>
 
