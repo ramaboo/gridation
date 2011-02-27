@@ -1,4 +1,11 @@
-== Gridation
+= Gridation
+
+== Installation
+
+1. From the command line:
+    gem install gridation
+
+
 http://gridation.com
 
 Copyright 2009 - 2011 David Singer <david@ramaboo.com>
