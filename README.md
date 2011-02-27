@@ -40,13 +40,11 @@ From the command line:
 [David][david] is the lead web developer at [Ramaboo](http://ramaboo.com/).
 
 ## Credits
-Based on the [960 Grid System](http://960.gs/).
+Based on the [960 Grid System](http://960.gs/) and the [Variable Grid System](http://www.spry-soft.com/grids).
 
-Based on the [Variable Grid System](http://www.spry-soft.com/grids).
+Inspired by the design of [Blueprint](http://www.blueprintcss.org/).
 
-Inspired by [Blueprint](http://www.blueprintcss.org/).
-
-Built with [Compass](http://compass-style.org/).
+Built with [Compass](http://compass-style.org/) and [Sass](http://http://sass-lang.com/).
 
 
 A special thanks to [Christopher Eppstein](http://chriseppstein.github.com/) and the 
