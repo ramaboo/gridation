@@ -28,9 +28,10 @@ Inspired by Blueprint
 http://www.blueprintcss.org
 
 ## License
-Copyright 2009 - 2011 David Singer
-Gridation is released under the [MIT License][LICENSE].
+Copyright 2009 - 2011 [David Singer][david].
+Gridation is released under the [MIT License][license].
 
 
 
-
+[david]: http://ramaboo.com/david
+[license]: https://github.com/ramaboo/gridation/blob/master/LICENSE
