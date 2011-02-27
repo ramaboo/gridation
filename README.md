@@ -5,7 +5,7 @@
 ## Installation
 
 ### Rails 3
-For automatic installation edit your Gemfile:
+For automatic installation edit your [Gemfile][gemfile]:
     gem 'gridation'
 
 Now run Bundler:
@@ -51,3 +51,4 @@ Copyright 2009 - 2011 [David Singer][david].
 [gridation]: http://gridation.com/
 [david]: http://ramaboo.com/david
 [license]: https://github.com/ramaboo/gridation/blob/master/LICENSE
+[gemfile]: http://gembundler.com/gemfile.html
