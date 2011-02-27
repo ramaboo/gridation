@@ -1,6 +1,6 @@
 # Gridation
 
-Gridation is a full featured [Sass](http://http://sass-lang.com/) based grid framework built on top of [Compass](http://compass-style.org/).
+[Gridation][gridation] is a full featured [Sass](http://http://sass-lang.com/) based grid framework built on top of [Compass](http://compass-style.org/).
 
 ## Installation
 
@@ -25,7 +25,7 @@ From the command line:
     $ gem install gridation
 
 ## Author
-Gridation was written by [David Singer][david].
+[Gridation][gridation] was written by [David Singer][david].
 
 [David][david] is the lead web developer at [Ramaboo](http://ramaboo.com/).
 
@@ -45,7 +45,7 @@ Compass [contributors](https://github.com/chriseppstein/compass/contributors) fo
 ## License
 Copyright 2009 - 2011 [David Singer][david].
 
-Gridation is released under the [MIT License][license].
+[Gridation][gridation] is released under the [MIT License][license].
 
 
 [gridation]: http://gridation.com/
