@@ -31,7 +31,7 @@ From the command line:
 * [Homepage][gridation]
 * [Wiki][wiki]
 * [Issues][issues]
-* [RubyGems Page](https://rubygems.org/gems/gridation)
+* [RubyGems.org Page](https://rubygems.org/gems/gridation)
 
 
 ## Author
