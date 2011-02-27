@@ -28,10 +28,10 @@ From the command line:
 
 ## Helpful Links
 
-* [Homepage][gridation]
-* [Wiki][wiki]
-* [Issues][issues]
-* [RubyGems.org Page](https://rubygems.org/gems/gridation)
+* Go to the [Homepage][gridation]
+* Find answers on the [Wiki][wiki]
+* Report [Issues][issues]
+* Gridation on [RubyGems](https://rubygems.org/gems/gridation)
 
 
 ## Author
