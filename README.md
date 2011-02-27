@@ -19,6 +19,10 @@ Add this to load Gridation from your existing Sass file (e.g. `app/stylesheets/s
     @include gridation
     @include gridation-classes // Optional
 
+### Manual Install
+
+From the command line:
+    $ gem install gridation
 
 ## Author
 Gridation is written by [David Singer][david].
