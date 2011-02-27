@@ -10,6 +10,9 @@ From the command line:
 Edit your Gemfile:
     gem 'gridation'
 
+Run bundler:
+    $ bundle install
+
 Add this to a file included in your load path (e.g. `config/enviroment.rb` or `config/initializers/compass.rb`):
     require 'gridation'
 
