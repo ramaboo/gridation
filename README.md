@@ -1,6 +1,6 @@
 # Gridation
 
-Gridation is a full featured Sass based grid framework built on top of Compass.
+Gridation is a full featured [Sass](http://http://sass-lang.com/) based grid framework built on top of [Compass](http://compass-style.org/).
 
 ## Installation
 
@@ -36,9 +36,11 @@ Based on the [Variable Grid System](http://www.spry-soft.com/grids).
 
 Inspired by [Blueprint](http://www.blueprintcss.org/).
 
+Built with [Compass](http://compass-style.org/).
+
+
 A special thanks to [Christopher Eppstein](http://chriseppstein.github.com/) and the 
-Compass [contributors](https://github.com/chriseppstein/compass/contributors) team for the
-great foundation upon which [Gridation][gridation] is built.
+Compass [contributors](https://github.com/chriseppstein/compass/contributors) for their hard work.
 
 ## License
 Copyright 2009 - 2011 [David Singer][david].
