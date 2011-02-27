@@ -1,0 +1,16 @@
+== Gridation
+http://gridation.com
+
+Copyright 2009 - 2011 David Singer <david@ramaboo.com>
+
+MIT License
+http://gridation.com/license
+
+Based on the 960 Grid System
+http://960.gs
+
+Based on the Variable Grid System
+http://www.spry-soft.com/grids
+
+Inspired by Blueprint
+http://www.blueprintcss.org
