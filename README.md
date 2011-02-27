@@ -23,6 +23,13 @@ Based on the [Variable Grid System](http://www.spry-soft.com/grids).
 
 Inspired by [Blueprint](http://www.blueprintcss.org).
 
+## Author
+
+Gridation is written by [David Singer][david].
+
+[David][david] is the lead web developer at [Ramaboo](http://ramaboo.com).
+
+
 ## License
 Copyright 2009 - 2011 [David Singer][david].
 
