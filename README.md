@@ -16,21 +16,17 @@ Load Gridation from your existing Sass file (app/stylesheets/screen.sass):
     @include gridation-classes // Optional
 
 
-
 ## Credits
-Based on the 960 Grid System
-http://960.gs
+Based on the [960 Grid System](http://960.gs)
 
-Based on the Variable Grid System
-http://www.spry-soft.com/grids
+Based on the [Variable Grid System](http://www.spry-soft.com/grids)
 
-Inspired by Blueprint
-http://www.blueprintcss.org
+Inspired by [Blueprint](http://www.blueprintcss.org)
 
 ## License
 Copyright 2009 - 2011 [David Singer][david].
-Gridation is released under the [MIT License][license].
 
+Gridation is released under the [MIT License][license].
 
 
 [david]: http://ramaboo.com/david
