@@ -36,7 +36,7 @@ Based on the [Variable Grid System](http://www.spry-soft.com/grids).
 
 Inspired by [Blueprint](http://www.blueprintcss.org).
 
-A special thanks to [Compass](http://compass-style.org) upon which [Gridation][gridaiton] is built.
+A special thanks to [Compass](http://compass-style.org) upon which [Gridation][gridation] is built.
 
 ## License
 Copyright 2009 - 2011 [David Singer][david].
