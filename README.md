@@ -24,6 +24,16 @@ Add this to load Gridation from your existing Sass file (e.g. `app/stylesheets/s
 From the command line:
     $ gem install gridation
 
+
+
+## Helpful Links
+
+* [Homepage][gridation]
+* [Wiki][wiki]
+* [Issues][issues]
+* [RubyGems Page](https://rubygems.org/gems/gridation)
+
+
 ## Author
 [Gridation][gridation] was written by [David Singer][david].
 
@@ -47,7 +57,8 @@ Copyright 2009 - 2011 [David Singer][david].
 
 [Gridation][gridation] is released under the [MIT License][license].
 
-
+[issues]: https://github.com/ramaboo/gridation/issues
+[wiki]: https://github.com/ramaboo/gridation/wiki
 [gridation]: http://gridation.com/
 [david]: http://ramaboo.com/david
 [license]: https://github.com/ramaboo/gridation/blob/master/LICENSE
