@@ -1,28 +1,23 @@
-= Gridation
+# Gridation
 
 Gridation is a full featured Sass based grid framework built on top of Compass.
 
-== Installation
+## Installation
 
-1. From the command line:
+* From the command line:
     gem install gridation
 
-2 
+* Add to a file include in your load path (config/enviroment.rb or config/initializers/compass.rb):
+    require 'gridation'
 
-http://gridation.com
+* Load Gridation from your existing Sass file (app/stylesheets/screen.sass)
+    @import gridation
+    @include gridation
+    @include gridation-classes // Optional
 
 
 
-
-
-== License
-Gridation is released under the {MIT License}[link:LICENSE].
-
-Copyright 2009 - 2011 David Singer <david@ramaboo.com>
-
-MIT License
-http://gridation.com/license
-
+== Credits
 Based on the 960 Grid System
 http://960.gs
 
@@ -32,11 +27,10 @@ http://www.spry-soft.com/grids
 Inspired by Blueprint
 http://www.blueprintcss.org
 
+== License
+Copyright 2009 - 2011 David Singer
+Gridation is released under the [MIT License][LICENSE].
 
-1. Install \Rails at the command prompt if you haven't yet:
 
-    gem install rails
 
-2. At the command prompt, create a new \Rails application:
 
-    rails new myapp
