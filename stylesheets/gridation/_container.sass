@@ -16,10 +16,14 @@
   @include container(false, $n)
 
 @mixin global-container($columns: false, $rows: false)
-  margin: 0 auto
-  @include clearfix
   @include container($columns, $rows)
+  @include clearfix
   
+@mixin global-container-center($columns: false, $rows: false)
+  @include global-container($columns, $rows)
+  margin: 0 auto
+  display: block
+  float: none
 
 @mixin gridation-container-base
   @include gridation-grid-base

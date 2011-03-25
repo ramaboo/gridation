@@ -1,5 +1,8 @@
-@mixin text-indent
-  @include text-indent-left
+@mixin text-indent($direction: left)
+  @if $direction == right
+    @include text-indent-right
+  @else
+    @include text-indent-left
 
 @mixin text-indent-left
   text-indent: -99999px

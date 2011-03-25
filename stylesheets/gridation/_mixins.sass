@@ -1,14 +1,3 @@
 // Put all generic mixins here; this file is included directly after _base.sass
 @import mixins/helper
-
-@mixin background-grid($path: $gridation-images-path)
-  background-image: url(#{$gridation-images-path}/grid/block.png)
-  
-@mixin background-column-grid($path: $gridation-images-path)
-  background-image: url(#{$gridation-images-path}/grid/column.png)
-  
-@mixin background-row-grid($path: $gridation-images-path)
-  background-image: url(#{$gridation-images-path}/grid/row.png)
-  
-
-
+@import mixins/background

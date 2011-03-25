@@ -24,6 +24,8 @@
   .block
     @include block
   @for $i from 0 through $gridation-grid-rows
+    .block-#{$i}
+      @include block($i)
     @for $j from 0 through $gridation-grid-columns
       .block-#{$j}-#{$i}
         @include block($j, $i)
