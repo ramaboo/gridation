@@ -22,7 +22,8 @@ Add this to load Gridation from your existing Sass file (e.g. `app/stylesheets/s
 ### Manual Installation
 
 From the command line:
-    $ gem install gridation
+
+    $ gem install gridation foo
 
 
 
