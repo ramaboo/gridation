@@ -13,9 +13,11 @@ Now run [Bundler](http://gembundler.com/):
     $ bundle install
 
 Add this to a file included in your load path (e.g. `config/enviroment.rb` or `config/initializers/gridation.rb`):
+
     require 'gridation'
 
 Add this to load Gridation from your existing Sass file (e.g. `app/stylesheets/screen.sass`):
+
     @import gridation
     @include gridation
 
@@ -23,7 +25,7 @@ Add this to load Gridation from your existing Sass file (e.g. `app/stylesheets/s
 
 From the command line:
 
-    $ gem install gridation foo
+    $ gem install gridation
 
 
 
