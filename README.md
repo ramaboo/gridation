@@ -11,13 +11,12 @@ For automatic installation edit your [Gemfile][gemfile]:
 Now run [Bundler](http://gembundler.com/):
     $ bundle install
 
-Add this to a file included in your load path (e.g. `config/enviroment.rb` or `config/initializers/compass.rb`):
+Add this to a file included in your load path (e.g. `config/enviroment.rb` or `config/initializers/gridation.rb`):
     require 'gridation'
 
 Add this to load Gridation from your existing Sass file (e.g. `app/stylesheets/screen.sass`):
     @import gridation
     @include gridation
-    @include gridation-classes // Optional
 
 ### Manual Installation
 
@@ -51,7 +50,7 @@ A special thanks to [Christopher Eppstein](http://chriseppstein.github.com/) and
 Compass [contributors](https://github.com/chriseppstein/compass/contributors) for their hard work.
 
 ## License
-Copyright 2009 - 2011 [David Singer][david].
+Copyright 2011 [David Singer][david].
 
 [Gridation][gridation] is released under the [MIT License][license].
 
