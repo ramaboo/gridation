@@ -1,6 +1,9 @@
 @mixin debug($n: false, $saturation: 100, $lightness: 50)
   @include gridation-debug-background-color($n, $saturation, $lightness)
 
+@mixin debug-block($n: false)
+  @include gridation-debug-background-color($n, 75, 50)
+
 @mixin debug-container($n: false)
   @include gridation-debug-background-color($n, 100, 75)
 
@@ -36,6 +39,12 @@
     .debug-#{$i}
       @include debug($i)
   
+  .debug-block
+    @include debug-block
+  @for $i from 0 through $gridation-debug-colors
+    .debug-block-#{$i}
+      @include debug-block($i)
+  
   .debug-container
     @include debug-container
   @for $i from 0 through $gridation-debug-colors
@@ -66,4 +75,9 @@
     @include debug-color(green)
   .debug-blue
     @include debug-color(blue)
-  
+  .debug-magenta
+    @include debug-color(magenta)
+  .debug-cyan
+    @include debug-color(cyan)
+  .debug-yellow
+    @include debug-color(yellow)

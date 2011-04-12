@@ -41,15 +41,20 @@
 @mixin gridation-container-classes
   .container
     @include container
+
+  @for $i from 0 through $gridation-grid-columns
+    .container-#{$i}
+      @include container($i)
+
   @for $i from 0 through $gridation-grid-rows
     @for $j from 0 through $gridation-grid-columns
       .container-#{$j}-#{$i}
         @include container($j, $i)
 
-  @for $i from 0 through $gridation-grid-columns
-    .column-container-#{$i}
-      @include column-container($i)
-      
-  @for $i from 0 through $gridation-grid-rows
-    .row-container-#{$i}
-      @include row-container($i)
+  // @for $i from 0 through $gridation-grid-columns
+  //   .column-container-#{$i}
+  //     @include column-container($i)
+  // 
+  // @for $i from 0 through $gridation-grid-rows
+  //   .row-container-#{$i}
+  //     @include row-container($i)

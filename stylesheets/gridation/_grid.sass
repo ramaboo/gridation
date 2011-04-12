@@ -1,27 +1,47 @@
 @mixin grid($background: false)
-  @include gridation-grid($background)
+  @include gridation-grid
   width: $gridation-grid-width
   height: $gridation-grid-height
+  @if $background
+    @include grid-background
 
 @mixin column-grid($background: false)
-  @include gridation-grid($background)
+  @include gridation-grid
   width: $gridation-grid-width
+  @if $background
+    @include column-grid-background
 
 @mixin row-grid($background: false)
-  @include gridation-grid($background)
+  @include gridation-grid
   height: $gridation-grid-height
-
-
-@mixin gridation-grid($background: false)
-  @include gridation-grid-base
   @if $background
-    @include background-grid
+    @include row-grid-background
 
 @mixin gridation-grid-base
   position: relative
   @include float-left
-  
 
+@mixin gridation-grid
+  @include gridation-grid-base
+
+@mixin grid-background($path: $gridation-images-path)
+  background-image: url(#{$gridation-images-path}/backgrounds/grid.png)
+  
+@mixin column-grid-background($path: $gridation-images-path)
+  background-image: url(#{$gridation-images-path}/backgrounds/column-grid.png)
+  
+@mixin row-grid-background($path: $gridation-images-path)
+  background-image: url(#{$gridation-images-path}/backgrounds/row-grid.png)
+  
 @mixin gridation-grid-classes
   .grid
     @include grid
+  
+  .grid-background
+    @include grid-background
+  
+  .column-grid-background
+    @include column-grid-background
+  
+  .row-grid-background
+    @include row-grid-background

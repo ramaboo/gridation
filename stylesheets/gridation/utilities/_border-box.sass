@@ -1,0 +1,22 @@
+@mixin border-box($width: $gridation-border-width, $style: $gridation-border-style, $color: $gridation-border-color)
+  @include gridation-border-box($width, $style, $color)
+
+@mixin gridation-border-box-base
+  @include box-sizing(border-box)
+
+@mixin gridation-border-box($width: $gridation-border-width, $style: $gridation-border-style, $color: $gridation-border-color)
+  @include gridation-border-box-base
+  @if $width == 0
+    border: none
+  @else
+    border:
+      width: $width
+      style: $style
+      color: $color
+
+@mixin gridation-border-box-classes
+  .border-box
+    @include border-box
+  @for $i from 0 through $gridation-border-sizes
+    .border-box-#{$i}
+      @include border-box($gridation-border-width * $i)

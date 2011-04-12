@@ -1,0 +1,28 @@
+@mixin symetric($columns: false, $rows: false)
+  @if $n == 0
+    display: none
+  @else
+  
+    $width: (($gridation-columns / $n) * $gridation-column-width) + (($gridation-columns / $n - 1) * $gridation-column-gutter)
+    
+    @if subpixel($width) and $gridation-debug
+      @debug "Subpixel rendering may occur on symmetric(#{$number})"
+    
+    width: $width
+
+
+@mixin gridation-symmetric-base
+  @include gridation-grid-base
+  
+  
+@mixin gridation-symmetric
+
+@mixin gridation-symmetric-classes
+  .symettric
+    @include symmetric
+  @for $i from 0 through $gridation-grid-columns
+    .symmetric-#{$i}
+      @include symmetric($i)
+
+
+

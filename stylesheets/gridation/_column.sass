@@ -2,14 +2,15 @@
   @include gridation-column
   @if $n == 0
     display: none !important
-  @else if $n
+  @else
     @include gridation-column-width($n)
 
 @mixin gridation-column-base
   @include gridation-grid-base
 
-@mixin gridation-column-width($n)
-  width: ($gridation-column-width * $n) + (($n - 1) * $gridation-column-gutter)
+@mixin gridation-column-width($n: false)
+  @if $n
+    width: ($gridation-column-width * $n) + (($n - 1) * $gridation-column-gutter)
 
 @mixin gridation-column-margins
   margin-right: $gridation-grid-margin-right
@@ -25,5 +26,3 @@
   @for $i from 0 through $gridation-grid-columns
     .column-#{$i}
       @include column($i)
-
-

@@ -9,6 +9,14 @@
   @if $rows
     @include gridation-row-height($rows)
 
+
+@mixin column-block($n)
+  @include block($n, false)
+
+@mixin row-block($n)
+  @include block(false, $n)
+
+
 @mixin gridation-block-base
   @include gridation-grid-base
 
@@ -23,9 +31,20 @@
 @mixin gridation-block-classes
   .block
     @include block
-  @for $i from 0 through $gridation-grid-rows
+
+  @for $i from 0 through $gridation-grid-columns
     .block-#{$i}
       @include block($i)
+
+  @for $i from 0 through $gridation-grid-rows
     @for $j from 0 through $gridation-grid-columns
       .block-#{$j}-#{$i}
         @include block($j, $i)
+
+  // @for $i from 0 through $gridation-grid-columns
+  //   .column-block-#{$i}
+  //     @include column-block($i)
+  // 
+  // @for $i from 0 through $gridation-grid-rows
+  //   .row-block-#{$i}
+  //     @include row-block($i)

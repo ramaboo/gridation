@@ -8,7 +8,11 @@
 @mixin stack-reset($position: auto)
   @include stack(0, $position)
 
+@mixin gridation-stack-base
+  // Empty
+
 @mixin gridation-stack($position: $gridation-stack-postion)
+  @include gridation-stack-base
   @if $position
     postion: $position
 
