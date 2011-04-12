@@ -1,6 +1,6 @@
 # Gridation
 
-[Gridation][gridation] is a full featured [Sass](http://http://sass-lang.com/) based grid framework built on top of [Compass](http://compass-style.org/).
+[Gridation][gridation] is a full featured [Sass](http://sass-lang.com/) based grid framework built on top of [Compass](http://compass-style.org/).
 
 ## Installation
 
@@ -47,7 +47,7 @@ Based on the [960 Grid System](http://960.gs/) and the [Variable Grid System](ht
 
 Inspired by the design of [Blueprint](http://www.blueprintcss.org/).
 
-Built with [Compass](http://compass-style.org/) and [Sass](http://http://sass-lang.com/).
+Built with [Compass](http://compass-style.org/) and [Sass](http://sass-lang.com/).
 
 
 A special thanks to [Christopher Eppstein](http://chriseppstein.github.com/) and the 
