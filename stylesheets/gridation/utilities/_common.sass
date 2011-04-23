@@ -1,5 +1,9 @@
 @mixin hidden
   display: none
+
+@mixin clear($direction: both)
+  $direction: unquote($direction)
+  clear: $direction
   
 @mixin gridation-common-classes
   .nowrap
@@ -11,3 +15,5 @@
   .hidden
     @include hidden
   
+  .clear
+    @include clear

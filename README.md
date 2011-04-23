@@ -6,6 +6,7 @@
 
 ### Rails 3
 For automatic installation edit your [Gemfile][gemfile]:
+
     gem 'gridation'
 
 Now run [Bundler](http://gembundler.com/):
@@ -36,6 +37,10 @@ From the command line:
 * Report [Issues][issues]
 * Gridation on [RubyGems](https://rubygems.org/gems/gridation)
 
+## TODO
+* Add common grid sizes (Blueprint clone, gs960 clone, etc.)
+* Mobile support
+
 
 ## Author
 [Gridation][gridation] was written by [David Singer][david].
@@ -54,7 +59,7 @@ A special thanks to [Christopher Eppstein](http://chriseppstein.github.com/) and
 Compass [contributors](https://github.com/chriseppstein/compass/contributors) for their hard work.
 
 ## License
-Copyright 2011 [David Singer][david].
+Copyright 2009 - 2011 [David Singer][david].
 
 [Gridation][gridation] is released under the [MIT License][license].
 

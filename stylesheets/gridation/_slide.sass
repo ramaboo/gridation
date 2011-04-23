@@ -1,0 +1,76 @@
+@mixin slide($top: false, $right: false, $bottom: false, $left: false)
+  @include gridation-slide
+  display: block !important
+  position: relative
+  @if $top != 0 and $top != false
+    margin-top: (($top *( $gridation-row-height + $gridation-row-gutter)) - $gridation-grid-margin-top) * -1
+  
+  @if $right != 0 and $right != false
+    margin-right: (($right *( $gridation-column-width + $gridation-column-gutter)) - $gridation-grid-margin-right) * -1
+  
+  @if $bottom != 0 and $bottom != false
+    margin-bottom: (($bottom *( $gridation-row-height + $gridation-row-gutter)) - $gridation-grid-margin-bottom) * -1
+  
+  @if $left != 0 and $left != false
+    margin-left: (($left *( $gridation-column-width + $gridation-column-gutter)) - $gridation-grid-margin-left) * -1
+  
+@mixin slide-up($n: 1)
+  @include slide-top($n)
+  
+@mixin slide-top($n: 1)
+  @include slide($n)
+  
+@mixin slide-right($n: 1)
+  @include slide(false, $n)
+  
+@mixin slide-down($n: 1)
+  @include slide-bottom($n)
+  
+@mixin slide-bottom($n: 1)
+  @include slide(false, false, $n)
+  
+@mixin slide-left($n: 1)
+  @include slide(false, false, false, $n)
+
+
+@mixin gridation-slide-base
+  // Empty
+
+@mixin gridation-slide
+  @include gridation-slide-base
+
+@mixin gridation-slide-classes
+  .slide
+    @include slide
+  
+  .slide-top
+    @include slide-top
+  .slide-up
+    @include slide-up
+  @for $i from 0 through $gridation-grid-rows
+    .slide-top-#{$i}
+      @include slide-top($i)
+    .slide-up-#{$i}
+      @include slide-up($i)
+  
+  .slide-right
+    @include slide-right
+  @for $i from 0 through $gridation-grid-columns
+    .slide-right-#{$i}
+      @include slide-right($i)
+  
+  .slide-bottom
+    @include slide-bottom
+  .slide-down
+    @include slide-down
+  @for $i from 0 through $gridation-grid-rows
+    .slide-bottom-#{$i}
+      @include slide-bottom($i)
+    .slide-down-#{$i}
+      @include slide-down($i)
+  
+  .slide-left
+    @include slide-left
+  @for $i from 0 through $gridation-grid-columns
+    .slide-left-#{$i}
+      @include slide-left($i)

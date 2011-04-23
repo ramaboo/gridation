@@ -14,12 +14,18 @@
   @if $left
     left: (($left * $gridation-column-width) + ($left * $gridation-column-gutter)) * - 1
 
-  
+
+@mixin push-up($n: 1)
+  @include push-top($n)
+
 @mixin push-top($n: 1)
   @include push($n)
   
 @mixin push-right($n: 1)
   @include push(false, $n)
+
+@mixin push-down($n: 1)
+  @include push-bottom($n)
 
 @mixin push-bottom($n: 1)
   @include push(false, false, $n)
@@ -40,9 +46,13 @@
   
   .push-top
     @include push-top
+  .push-up
+    @include push-up
   @for $i from 0 through $gridation-grid-rows
     .push-top-#{$i}
       @include push-top($i)
+    .push-up-#{$i}
+      @include push-up($i)
   
   .push-right
     @include push-right
@@ -52,9 +62,13 @@
   
   .push-bottom
     @include push-bottom
+  .push-down
+    @include push-down
   @for $i from 0 through $gridation-grid-rows
     .push-bottom-#{$i}
       @include push-bottom($i)
+    .push-down-#{$i}
+      @include push-down($i)
   
   .push-left
     @include push-left
