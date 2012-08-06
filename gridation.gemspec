@@ -12,7 +12,6 @@ Gem::Specification.new do |s|
   s.summary     = 'Sass based grid framework.'
   s.description = 'Gridation is a full featured Sass based grid framework built on top of Compass.'
 
-  s.rubyforge_project = 'gridation'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
